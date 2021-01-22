@@ -17,13 +17,11 @@ public function __construct($index){
     $this->description = self::getDescription($index); 
     $this->price = self::getPrice($index);    
 }
-
 public static function getName($index){
   
     $name = $GLOBALS['nameArray'][$index];
     return $name;
 }
-
 public static function getImage($index){
      
     $image = $GLOBALS['imageArray'][$index];
@@ -39,8 +37,8 @@ public static function getPrice($index){
     $price = $GLOBALS['priceArray'][$index];
     return $price;
 }  
- 
 public function toArray(){
+    
     $array = array(
         "name"          => $this->name,
         "storage"       => $this->storage,
