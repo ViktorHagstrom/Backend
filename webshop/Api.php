@@ -1,52 +1,19 @@
 <?php
-include_once('arrays.php');
+include_once'Product.php';
 
-class Product{
+header("Content-type: application/json; charset=UTF-8");
 
-    private $name;
-    private $storage;
-    private $description;
-    private $image;
-    private $price;
-     
-public function __construct($index){
+ $products = array();
 
-    $this->storage = rand(1,50);
-    $this->name= self::getName($index);
-    $this->image = self::getImage($index); 
-    $this->description = self::getDescription($index); 
-    $this->price = self::getPrice($index);    
-}
-public static function getName($index){
-  
-    $name = $GLOBALS['nameArray'][$index];
-    return $name;
-}
-public static function getImage($index){
-     
-    $image = $GLOBALS['imageArray'][$index];
-    return $image;
-}
-public static function getDescription($index){
+for ($i=0; $i <10 ; $i++) { 
    
-    $description = $GLOBALS['descriptionArray'][$index];
-    return $description;
+    $productObject = new Product($i);
+    $product = $productObject->toArray();
+    array_push($products,$product);
 }
-public static function getPrice($index){
-   
-    $price = $GLOBALS['priceArray'][$index];
-    return $price;
-}  
-public function toArray(){
-    
-    $array = array(
-        "name"          => $this->name,
-        "storage"       => $this->storage,
-        "image"         => $this->image,
-        "description"   => $this->description,
-        "price"         => $this->price
-    );
-    return $array;
-}
+$json = json_encode($products,JSON_UNESCAPED_UNICODE|JSON_PRETTY_PRINT);
+echo $json; 
 
-}
+
+
+?>
