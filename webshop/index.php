@@ -1,4 +1,7 @@
-<?php include_once('App.php');  ?>
+<?php
+ include_once('App.php'); 
+ $limit = $_GET['limit'] ?? '10';
+?>
 <!DOCTYPE html>
 <html lang="sv">
 
@@ -62,35 +65,17 @@
                         <a class="nav-link" href="contact.php">Contact</a>
                     </li>
                 </ul>
-                
-                
-                <span class="navbar-text">
-                    Två Hippa Killar
-                </span>
-               
-               
-
+                <span class="navbar-text">Två Hippa Killar </span>  
             </div>
-
-        </div>
-        
+        </div>  
     </nav>
-
     <div class="row justify-content-center">
-
         <div class="col-6">
             <?php
-            App::main();
+            App::main($limit);
             ?>
-
         </div>
-
     </div>
-
-
-
-
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 </body>
 
