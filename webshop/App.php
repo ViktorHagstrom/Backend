@@ -3,7 +3,7 @@
 
     class App
     {
-        private static  $endpoint = 'http://localhost/Inl%C3%A4mningar/webshop/Api.php';
+        private static  $endpoint = 'http://localhost/Inl%C3%A4mningar/webshop/Api/Api.php';
 
 
 
@@ -21,7 +21,7 @@
                 if (self::checkData($array) == true) {
                     self::viewData($array);
                 } else {
-                    self::$endpoint = "http://localhost/Inl%C3%A4mningar/webshop/Api.php";
+                    self::$endpoint = "http://localhost/Inl%C3%A4mningar/webshop/Api/Api.php";
                     $array = self::getData();
                     self::viewData($array);
                 }
@@ -59,7 +59,7 @@
         public static function viewData($array)
         {
 
-            $list = "<div class='row'>";
+            $list = "<div class='row '>";
 
             foreach ($array as $key => $value) {
 
@@ -106,7 +106,7 @@
     </div> <!-- Card Body -->
 </div> <!-- Card -->
                 ";}
-                $list .= '</div> ';  // row
+                $list .= '</div>';  // row
                 echo $list;
         }
 
