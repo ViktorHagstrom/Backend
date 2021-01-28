@@ -5,12 +5,9 @@
     {
         private static  $endpoint = 'http://localhost/Inl%C3%A4mningar/webshop/Api/Api.php';
 
-
-
         public static function Main($limit)
         {
             //metodanrop här
-
 
             self::$endpoint = self::$endpoint . "?limit=$limit";
 
@@ -59,7 +56,7 @@
         public static function viewData($array)
         {
 
-            $list = "<div class='row '>";
+            $list = "<div class='row'>";
 
             foreach ($array as $key => $value) {
 

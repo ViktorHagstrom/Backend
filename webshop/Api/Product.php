@@ -11,7 +11,7 @@ class Product{
      
 public function __construct($index){
 
-    $this->storage = rand(0,50);
+    $this->storage = rand(1,50);
     $this->name= self::getName($index);
     $this->image = self::getImage($index); 
     $this->description = self::getDescription($index); 

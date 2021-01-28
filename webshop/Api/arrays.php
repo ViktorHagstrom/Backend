@@ -9,8 +9,8 @@ $imageArray = array(
     5 => 'saffron.jpg',    //https://pixabay.com/photos/saffron-red-real-real-saffron-3291935/ ----- fel format
     6 => 'cassia.jpg' ,    //https://pixabay.com/photos/cinnamon-stick-spice-food-2519512/
     7 => 'ceylon.jpg',     //https://pixabay.com/photos/cinnamon-stick-cinnamon-powder-spice-514243/
-    8 => 'cardamom.jpg',    //https://pixabay.com/photos/cardamom-elaichi-green-processed-166833/
-    9 => 'star-anise.jpg'       //https://pixabay.com/photos/star-anise-pepper-fragrant-1049573/
+    8 => 'cardamom.jpg',   //https://pixabay.com/photos/cardamom-elaichi-green-processed-166833/
+    9 => 'star-anise.jpg'  //https://pixabay.com/photos/star-anise-pepper-fragrant-1049573/
     );
     
     $nameArray = array(
